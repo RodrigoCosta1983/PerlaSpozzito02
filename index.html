@@ -946,5 +946,50 @@
     })(jQuery);
   </script>
     
+      <script>
+//var url = 'https://cdn.waplus.io/waplus-crm/settings/ossembed.js';
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.async = true;
+//s.src = url;
+s.src = 'js/ossembed.js';
+var options = {
+"enabled": true,
+"chatButtonSetting": {
+"backgroundColor": "#16BE45",
+"ctaText": "Envie-nos uma mensagem",
+"borderRadius": "8",
+"marginLeft": "20",
+"marginBottom": "20",
+"marginRight": "20",
+"position": "right",
+"textColor": "#ffffff",
+"phoneNumber": "5521966240004",
+"messageText": "👋🏻Olá",
+"trackClick": true
+},
+"brandSetting": {
+"brandName": "Dra. Perla Spozito",
+"brandSubTitle": "Respostas em até 1 dia\"Excelência em cada detalhe, para o seu sorriso\"",
+"headerTextColor": "#fff",
+"brandImg": "https://rodrigocosta1983.github.io/PerlaSpozzito02/images/logo_2.png",
+"welcomeText": "Oi! Em que posso ajudar?",
+"messageText": "Olá, gostaria de tirar algumas dúvidas ",
+"backgroundColor": "#0a5f54",
+"ctaText": "Start Chat",
+"borderRadius": "20",
+"autoShow": false,
+"btnColor": "#16BE45",
+"phoneNumber": "5521966240004",
+"trackClick": true
+}
+}
+s.onload = function() {
+CreateWhatsappChatWidget(options);
+};
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+</script>
+  
   </body>
 </html>
