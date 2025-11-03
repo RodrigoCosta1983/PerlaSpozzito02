@@ -282,7 +282,30 @@
 	});
 	$('.appointment_time').timepicker();
 
+  // Botão Voltar ao Topo
+	var scrollTopButton = $('.scroll-to-top');
 
+	// 1. Mostrar/Esconder o botão com base na rolagem
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 300) { // Mostra o botão depois de rolar 300px
+			if (!scrollTopButton.hasClass('show')) {
+				scrollTopButton.addClass('show');
+			}
+		} else {
+			if (scrollTopButton.hasClass('show')) {
+				scrollTopButton.removeClass('show');
+			}
+		}
+	});
+
+	// 2. Animar a rolagem ao clicar
+	scrollTopButton.on('click', function(event) {
+		event.preventDefault(); // Impede o comportamento padrão do link '#'
+		
+		$('html, body').animate({
+			scrollTop: 0
+		}, 800); // A velocidade da animação em milissegundos
+	});
 
 })(jQuery);
 
