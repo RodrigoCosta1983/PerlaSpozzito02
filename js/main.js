@@ -52,6 +52,11 @@
 	    nav:false,
 	    autoplayHoverPause: false,
 	    items: 1,
+
+		// ADICIONE ESTAS DUAS LINHAS:
+        mouseDrag: false,  // (Esta é para o computador)
+        touchDrag: false,  // (Esta é a que corrige o CELULAR)
+
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
