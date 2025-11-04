@@ -1,9 +1,10 @@
 /*!
- * Bootstrap v4.1.0 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Dra. Perla Spozito v4.1.0 (https://#/)
+ * Copyright 2025 The Dra. Perla Spozito Authors
+ * Copyright 2025 X, Inc.
+ * Licensed under MIT (https://#)
  */
+ 
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -3335,7 +3336,13 @@ input[type="button"].btn-block {
 .navbar-brand img {
   height: 80px; /* Altere este valor para o tamanho ideal */
   width: auto;  /* Mantém a proporção da imagem */
+  filter: brightness(80%);
+  transition: filter 0.3s ease;
 }  
+
+.navbar-brand:hover img {
+  filter: brightness(100%);
+}
 
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
