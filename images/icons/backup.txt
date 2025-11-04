@@ -1,1 +1,67 @@
-eyJjb2xJZCI6eyJJRCI6MSwibmFtZSI6Ik1pbmhhIGNvbGVcdTAwZTdcdTAwZTNvIGRlIFx1MDBlZGNvbmVzIiwiYm9va21hcmtfaWQiOjE5NDQ1MTAwLCJjcmVhdGVkIjoxNjIyMDQ5MTMwLCJ1cGRhdGVkIjoxNzYyMjE1OTYwLCJhY3RpdmUiOjEsInNvdXJjZSI6InJlbW90ZSIsIm9yZGVyIjowLCJjb2xvciI6IjAwMDAwMCIsInN0YXR1cyI6MX0sImNvbEJvb2ttYXJrSWQiOlt7ImlkIjoxODU1Nzg5NiwibmFtZSI6ImltcGxhbnRlLWRlbnRhcmlvIiwiY29sb3IiOiIjWFhYWFhYIiwicHJlbWl1bSI6IjAiLCJzb3J0IjoxfSx7ImlkIjoxNzYyMjE1MzY4MjM4LCJuYW1lIjoic2FcdTAwZmFkZSBidWNhbCIsImNvbG9yIjoiI1hYWFhYWCIsInByZW1pdW0iOjQsInNvcnQiOjJ9LHsiaWQiOjE3NjIyMTU5MDE4OTMsIm5hbWUiOiJsaW1wZXphIGRvcyBkZW50ZXMiLCJjb2xvciI6IiNYWFhYWFgiLCJwcmVtaXVtIjo0LCJzb3J0IjozfV19
+Ah, você tem toda a razão! Peço desculpas por isso.
+
+Muitos desses serviços de ícones mudaram suas políticas, e o download da "Fonte de Ícone" (o pacote css + font) agora é um recurso Premium na maioria deles.
+
+Obrigado por me corrigir. Então, vamos usar os arquivos .png que você baixou. O método é um pouco diferente, mas totalmente funcional.
+
+Em vez de usar a classe flaticon e a tag <span>, você usará a tag <img>.
+
+Como Usar os Ícones .png (Modo Gratuito)
+Passo 1: Salve os Ícones
+Baixe todos os ícones .png que você deseja.
+
+Para manter o projeto organizado, coloque todos esses novos arquivos .png dentro da sua pasta images/icons/ (você pode precisar criar a pasta icons dentro de images).
+
+Por exemplo: images/icons/anestesico.png, images/icons/calculo.png, etc.
+
+Passo 2: Altere o HTML
+No seu arquivo services.html, localize os serviços que você quer atualizar. Você vai substituir a tag <span> por uma tag <img>.
+
+O seu código antigo (para o "Anestésico moderno") se parece com isto:
+
+HTML
+
+<div class="col-md-3 d-flex align-self-stretch ftco-animate">
+    <div class="media block-6 services d-block text-center">
+        <div class="icon d-flex justify-content-center align-items-center">
+            <span class="flaticon-anesthesia"></span>  </div>
+        <div class="media-body p-2 mt-3">
+            <h3 class="heading">Anestésico moderno</h3>
+            <p>Even the all-powerful Pointing has no control...</p>
+        </div>
+    </div>      
+</div>
+Altere-o para isto:
+
+HTML
+
+<div class="col-md-3 d-flex align-self-stretch ftco-animate">
+    <div class="media block-6 services d-block text-center">
+        <div class="icon d-flex justify-content-center align-items-center">
+            <img src="images/icons/anestesico.png" alt="Ícone Anestésico" class="icon-png">
+        </div>
+        <div class="media-body p-2 mt-3">
+            <h3 class="heading">Anestésico moderno</h3>
+            <p>Texto novo para o serviço de anestésico moderno...</p>
+        </div>
+    </div>      
+</div>
+Faça o mesmo para os outros serviços (Cálculo Dentário, Paradontose, etc.), apontando src="" para o .png correto.
+
+Passo 3: Adicione CSS para Estilizar os PNGs
+O seu CSS original (style.css) foi feito para uma fonte (a tag <span>), não para uma imagem. A imagem .png pode ficar muito grande e sair do círculo.
+
+Adicione o seguinte código ao final do seu arquivo css/style.css para garantir que as imagens .png fiquem do tamanho correto:
+
+CSS
+
+/* Adicionar ao final de css/style.css */
+
+/* Este CSS ajusta as imagens .png para que caibam
+  dentro do círculo azul claro (classe ".icon")
+*/
+.services .icon .icon-png {
+  width: 60px;   /* Ajuste o tamanho conforme necessário */
+  height: 60px;  /* Ajuste o tamanho conforme necessário */
+}
+E pronto! Agora você está usando os PNGs que baixou gratuitamente, e eles devem aparecer corretamente dentro dos círculos de ícones.
