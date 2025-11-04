@@ -9381,3 +9381,8 @@ textarea.form-control {
     opacity: 1;
   }
 }
+
+.services .icon .icon-png {
+  width: 60px;   /* Ajuste o tamanho conforme necessário */
+  height: 60px;  /* Ajuste o tamanho conforme necessário */
+}
