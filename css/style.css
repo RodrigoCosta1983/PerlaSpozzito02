@@ -9395,3 +9395,14 @@ textarea.form-control {
   width: 50px;   /* Ajuste o tamanho conforme necessário */
   height: 50px;  /* Ajuste o tamanho conforme necessário */
 }
+
+
+/* ==========================================================================
+   Correção do Parallax no Desktop (Sobrescreve o Stellar.js)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .owl-carousel.home-slider .slider-item.bread-item {
+        background-position: center center !important;
+        background-attachment: fixed !important;
+    }
+}
